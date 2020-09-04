@@ -1,0 +1,116 @@
+.json-viewer {
+  padding: 1rem 1.25rem;
+  flex: 1;
+  overflow: auto;
+}
+
+.json-node-iterable {
+  width: fit-content;
+  padding-right: 0.85rem;
+  position: relative;
+  border-radius: 5px;
+}
+
+.json-node-iterable::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 24px;
+  top: 35px;
+  width: 1px;
+  background: #ffffff4f;
+}
+
+.json-node__start {
+  display: flex;
+  align-items: center;
+}
+
+.json-node__end {
+  margin-left: 10px;
+}
+
+.btn-toggle-collapse {
+  border: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.btn-toggle-collapse:hover {
+  color: #97a6ba;
+}
+
+.json-prop-name {
+  color: #ea9100;
+  margin-right: 10px;
+}
+
+.json-child-count {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 0.75rem;
+  color: #97a6ba;
+}
+
+.json-node__children {
+  padding-left: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.json-node-prop {
+  display: flex;
+  align-items: baseline;
+  padding: 0.4rem 0.5rem;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.json-node-prop__label {
+  margin-right: 8px;
+  color: #9797ff;
+}
+
+.json-node-prop__value {
+  color: #6cf99f;
+}
+
+.json-node-prop__number {
+  color: #ffe81d;
+}
+
+.json-node-prop__value a {
+  color: #6cf99f;
+}
+
+.json-node-iterable.collapsed {
+  align-items: center;
+  display: flex;
+}
+
+.json-node-iterable.collapsed .json-node__children {
+  display: none;
+}
+
+.json-node-iterable.collapsed svg {
+  transform: rotate(-90deg);
+  color: #ff2a7e;
+}
+
+.json-node-iterable.collapsed .json-node__end {
+  margin-left: 0;
+}
+
+.json-node-iterable.selected {
+  background: #4f567d;
+}
+
+.json-node-prop.selected {
+  background: #4f567d;
+}
