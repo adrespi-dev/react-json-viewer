@@ -65,7 +65,7 @@ const JsonFilePanel: React.FC<props> = ({ handleNewJsonFile }) => {
       />
       <h2>File Uploader</h2>
       <button className="button-file-upload" onClick={handleClickBtn}>
-        Upload Button
+        Upload a File
       </button>
       <div className="file-upload-separator">-- OR --</div>
       <div
