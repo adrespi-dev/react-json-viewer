@@ -32,7 +32,11 @@ const JsonViewerNodeIterable: React.FC<props> = ({ node }) => {
     </>
   );
 
-  const label = <span className="json-prop-name">"{nodeLabel}" :</span>;
+  const label = (
+    <span className="json-prop-name">
+      {isArray ? `"${nodeLabel}"` : nodeLabel} :
+    </span>
+  );
 
   const closures = {
     start: isArray ? "[" : "{",
