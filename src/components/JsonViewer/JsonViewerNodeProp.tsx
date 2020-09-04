@@ -29,7 +29,7 @@ const JsonViewerNodeProp: React.FC<props> = ({ jsonProp }) => {
     <div
       className={"json-node json-node-prop" + (isSelected ? " selected" : "")}
     >
-      <div className="json-node-prop__label">"{label}":</div>
+      <div className="json-node-prop__label">{label}:</div>
       <div className="json-node-prop__value">{valueContent}</div>
     </div>
   );

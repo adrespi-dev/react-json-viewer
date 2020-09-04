@@ -29,8 +29,10 @@ const populate = (
     content = normalizeProp(candidate);
   }
 
+  const parsedLabel = isNaN(parseFloat(label)) ? `"${label}"` : label;
+
   let result: JsonNode = {
-    label: label,
+    label: parsedLabel,
     path: path,
     ...content,
   };
