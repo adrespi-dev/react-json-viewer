@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./JsonPath.css";
 
 type props = {
@@ -6,14 +6,12 @@ type props = {
 };
 
 const JsonPath: React.FC<props> = ({ onSearchChanged }) => {
-  const [value, setValue] = useState("$..nombre,apellido");
+  const [value, setValue] = useState();
 
   const setNewValue = (val: string) => {
     setValue(val);
     onSearchChanged(val);
   };
-
-  useEffect(() => onSearchChanged(value));
 
   return (
     <div className="json-path">
